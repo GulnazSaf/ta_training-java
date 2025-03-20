@@ -1,32 +1,60 @@
-   Running Tests with Different Environments and Browsers:
-   To run tests with a specific environment, set the profile (dev=default, test, prod):
-   
-   # E.g. run with development environment
-   mvn -Pdev test
+# Test Automation Guide
 
-   To run tests in a specific browser, set the system property browser 
-   (chrome=default, firefox, edge, safari):
+This document provides instructions on how to run automated tests for the project using Maven. The tests can be executed in different environments and browsers as per your requirements.
 
-   # E.g. Run in chrome
-   mvn -P{env} -Dbrowser=chrome test
+---
 
-Task description
+## Table of Contents
+1. [Running Tests with a Specific Environment](#running-tests-with-a-specific-environment)
+2. [Running Tests in a Specific Browser](#running-tests-in-a-specific-browser)
+3. [Task Description](#task-description)
+
+---
+
+## Running Tests with a Specific Environment
+
+To run tests with a specific environment, set the Maven profile. The available profiles are:
+
+- **dev** (default) - Development environment
+- **test** - Test environment
+- **prod** - Production environment
+
+### Example: Run Tests in the Development Environment
+```bash
+mvn -Pdev test
+```
+
+## Running Tests in a Specific Browser
+
+To run tests in a specific browser, set the browser system property. The available browsers are:
+
+- **chrome** (default) 
+- **firefox** 
+- **edge**
+- **safari**
+
+### Example: Run Tests in the Development Environment
+```bash
+mvn -P{env} -Dbrowser=chrome test
+```
+
+## Task description
 Launch URL: https://www.saucedemo.com/
 
-UC-1 Test Login form with empty credentials:
+### UC-1 Test Login form with empty credentials:
 Type any credentials into "Username" and "Password" fields.
 Clear the inputs.
 Hit the "Login" button.
 Check the error messages: "Username is required".
 
-UC-2 Test Login form with credentials by passing Username:
+### UC-2 Test Login form with credentials by passing Username:
 Type any credentials in username.
 Enter password.
 Clear the "Password" input.
 Hit the "Login" button.
 Check the error messages: "Password is required".
 
-UC-3 Test Login form with credentials by passing Username & Password:
+### UC-3 Test Login form with credentials by passing Username & Password:
 Type credentials in username which are under Accepted username are sections.
 Enter password as secret sauce.
 Click on Login and validate the title “Swag Labs” in the dashboard.
