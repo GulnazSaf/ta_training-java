@@ -1,40 +1,48 @@
-Task 1
-Automate the following script:
+   Running Tests with Different Environments and Browsers:
+   To run tests with a specific environment, set the profile (dev=default, test, prod):
+   
+   # E.g. run with development environment
+   mvn -Pdev test
 
+   To run tests in a specific browser, set the system property browser 
+   (chrome=default, firefox, edge, safari):
 
-Open https://pastebin.com/ or a similar service in any browser.
-Create 'New Paste' with the following attributes:
+   # E.g. Run in chrome
+   mvn -P{env} -Dbrowser=chrome test
 
-* Code: "Hello from WebDriver"
-* Paste Expiration: "10 Minutes"
-* Paste Name / Title: "helloweb"
+Task description
+Launch URL: https://www.saucedemo.com/
 
+UC-1 Test Login form with empty credentials:
+Type any credentials into "Username" and "Password" fields.
+Clear the inputs.
+Hit the "Login" button.
+Check the error messages: "Username is required".
 
-Task 2
-Automate the following script:
+UC-2 Test Login form with credentials by passing Username:
+Type any credentials in username.
+Enter password.
+Clear the "Password" input.
+Hit the "Login" button.
+Check the error messages: "Password is required".
 
+UC-3 Test Login form with credentials by passing Username & Password:
+Type credentials in username which are under Accepted username are sections.
+Enter password as secret sauce.
+Click on Login and validate the title “Swag Labs” in the dashboard.
 
-1. Open https://pastebin.com/ or a similar service in any browser.
-2. Create 'New Paste' with the following attributes:
-    * Code:
-      git config --global user.name  "New Sheriff in Town"
-      git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
-      git push origin master --force
-    * Syntax Highlighting: "Bash"
-    * Paste Expiration: "10 Minutes"
-    * Paste Name / Title: "how to gain dominance among developers"
-3. Save 'paste' and check the following:
-    * Browser page title matches 'Paste Name / Title'
-    * Syntax is suspended for bash
-    * Check that the code matches the one from paragraph 2.
+Provide parallel execution, add logging for tests and use Data Provider to 
+parametrize tests. Make sure that all tasks are supported by these 3 
+conditions: UC-1; UC-2; UC-3.
 
-
-Task 3
-Method for counting the maximum number of unequal consecutive characters from an input string is created	10%
-Method for determining the maximum number of consecutive identical letters of the Latin alphabet in a line from an input string is created	10%
-Method for determining the maximum number of consecutive identical digits from an input string is created	10%
-Method for counting the maximum number of unequal consecutive characters from an input string is covered by unit tests	15%
-Method for determining the maximum number of consecutive identical letters of the Latin alphabet in a line from an input string is covered by unit tests	15%
-Method for determining the maximum number of consecutive identical digits from an input string is covered by unit tests	15%
-
-AAA and FIRST unit testing patterns are applied	25%
+Please, add task description as README.md into your solution!
+To perform the task use the various of additional options:
+Test Automation tool: Selenium WebDriver;
+Project Builder: Maven;
+Browsers: 1) Firefox; 2) Edge;
+Locators: XPath;
+Test Runner: JUnit;
+[Optional] Patterns: 1) Singleton; 2) Adapter; 3) Strategy;
+[Optional] Test automation approach: BDD;
+Assertions: Hamcrest;
+[Optional] Loggers: SLF4J.
