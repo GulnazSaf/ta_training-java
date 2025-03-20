@@ -80,21 +80,6 @@ public class LoginPage extends BasePage {
         return errorMessage.getText();
     }
 
-    // /**
-    //  * Checks if the error message is displayed.
-    //  *
-    //  * @return true if error message is displayed, false otherwise
-    //  */
-    // private boolean isErrorMessageDisplayed() {
-    //     try {
-    //         wait.until(ExpectedConditions.visibilityOf(errorMessage));
-    //         return errorMessage.isDisplayed();
-    //     } catch (TimeoutException e) {
-    //         logger.info("Error message not displayed within timeout period");
-    //         return false;
-    //     }
-    // }
-
     /**
      * Attempts to login with the provided credentials.
      *
@@ -106,17 +91,6 @@ public class LoginPage extends BasePage {
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
-
-        // if (isErrorMessageDisplayed()) {
-        //     String error = getErrorMessage();
-        //     logger.info("Login failed with error: {}", error);
-        //     return this;
-        // } else {
-        //     logger.info("Login successful, redirecting to ProductPage");
-        //     ProductPage productPage = new ProductPage();
-        //     wait.until(ExpectedConditions.urlContains("/inventory.html"));
-        //     return productPage;
-        // }
     }
 
 }

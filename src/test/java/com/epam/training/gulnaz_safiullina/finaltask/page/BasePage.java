@@ -25,28 +25,5 @@ public abstract class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(config.timeout()));
         PageFactory.initElements(driver, this);
     }
-    
-//     /**
-//      * Converts the page object to LoginPage
-//      * @return LoginPage instance
-//      * @throws IllegalStateException if the current page is not a LoginPage
-//      */
-//     public LoginPage asLoginPage() {
-//         if (this instanceof LoginPage) {
-//             return (LoginPage) this;
-//         }
-//         throw new IllegalStateException("Current page is not a LoginPage");
-//     }
 
-//     /**
-//      * Converts the page object to ProductPage
-//      * @return ProductPage instance
-//      * @throws IllegalStateException if the current page is not a ProductPage
-//      */
-//     public ProductPage asProductPage() {
-//         if (this instanceof ProductPage) {
-//             return (ProductPage) this;
-//         }
-//         throw new IllegalStateException("Current page is not a ProductPage");
-//     }
 }
