@@ -1,6 +1,6 @@
 # Test Automation Guide
 
-This document provides instructions on how to run automated tests for the project using Maven. The tests can be executed in different environments and browsers as per your requirements.
+This document provides instructions on how to run automated tests for the project using Maven. The tests can be executed in different environments and browsers.
 
 ---
 
